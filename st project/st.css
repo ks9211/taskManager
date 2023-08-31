@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    
+    color: white;
+    font-family: "Poppins",sans-serif;
+    background: url('white-concrete-wall.jpg');
+}
+
+.heading{
+    color: black;
+}
+
+
+.search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+
+
+.search input,button{
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 20px;
+    font-size:1.2rem;
+    border: none;
+    
+}
+
+.search button{
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+form{
+    margin-top: 60px;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,button{
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 20px;
+    font-size:1.8rem;
+    border: none;
+
+    
+}
+
+.task-due-date{
+    margin-left: 20px;
+}
+
+form .task-input-button{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: yellow;
+    cursor: pointer;
+
+}
+
+.task-category{
+    margin: 1rem;
+    position: relative;
+    overflow: none;
+    /* border-radius: 60px; */
+    font-size: 18px;
+}
+
+.task-category-select{
+    border-radius: 50px;
+}
+
+.task-category::after {
+    
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    top: 0;
+    height: 1.2rem;
+    right: 0;
+    width: 1.2rem;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    color: black;
+    background-color: whitesmoke;
+}
+
+.sort-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor:pointer;
+    
+}
+
+.sort-button{
+    background-color: yellow;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 50px;
+    
+}
+
+.date-btn{
+    background-color: yellow;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.task-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.task-date{
+    margin-left: 100px;
+    font-size: 18px;
+}
+.task {
+    margin: 0.5rem;
+    padding: 10px;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.task li {
+    flex: 1;
+}
+
+
+.trash-btn, 
+.complete-btn, .edit-btn, .save-btn {
+    /* color: white; */
+    border: none;
+    
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+.complete-btn {
+    background: yellow;
+    color: black;
+}
+
+.edit-btn{
+    background: yellow;
+    color: black;
+}
+.save-btn{
+    background: yellow;
+    color: black;
+}
+
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: yellow;
+    color: black;
+}
+
+.task-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+
+
+.completed {
+    /* text-decoration: line-through; */
+    opacity: 0.5;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+
+
+select{
+    appearance: none;
+    outline: none;
+    border:none;
+   
+}
+
+
+.select1{
+    margin: 1rem;
+    position: relative;
+    overflow: none;
+    border-radius: 60px;
+}
+
+select{
+    color:black;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+    
+}
+
+.sort-button{
+    align-items: center;
+}
+
+.filter-task{
+    border-radius: 20px;
+}
+
+.select1::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    top: 0;
+    height: 1.2rem;
+    right: 0;
+    width: 1.2rem;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select1:hover::after{
+    background-color: whitesmoke;
+    color: black;;
+}
+
+
+@media (max-width: 768px) {
+    .search {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search input[type="text"],
+    .search button {
+        width: 100%;
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form select,
+    form button {
+        width: 100%;
+    }
+}
+
+.task-text-input{
+    border: none;
+}
+
+
+.sort-category-button{
+    align-items: center;
+    background-color: yellow;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 50px;
+}
+
+.digital-clock{
+    color: black;
+    font-size: 20px;
+}
